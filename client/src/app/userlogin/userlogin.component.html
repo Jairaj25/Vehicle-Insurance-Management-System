@@ -1,0 +1,21 @@
+<router-outlet></router-outlet>
+<div class="container" id="container">
+
+	<div class="form-container sign-in-container">
+		<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="formGroup">
+			<h1>Sign in</h1>
+
+      <input type="text" placeholder="Your ID" id="ID" name="ID" required formControlName="ID">
+      <small *ngIf= "ID && ID.invalid && ID.touched" class="text-danger">*ID is required</small>
+      <input type="password" placeholder="Password" id="password" name="password" required formControlName="password">
+      <small *ngIf= "password && password.invalid && password.touched" class="text-danger">*password is required</small><br>
+			<a routerLink="/fogpass" routerLinkActive="active">Forgot your password?</a><br><br>
+			<button [disabled]="this.myForm.invalid" routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page">Sign In</button>
+            <br><br>
+            <button routerLink="/register" routerLinkActive="active" ariaCurrentWhenActive="page" id="signUp">Sign Up</button>
+        </div>
+		  </form>
+	</div>
+
+</div>

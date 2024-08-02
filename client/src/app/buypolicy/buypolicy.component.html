@@ -1,0 +1,88 @@
+<router-outlet></router-outlet>
+
+<div class="btnlogo">
+  <button class="logout" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" id="logout">Logout</button>
+</div>
+
+<div class="btndb">
+  <button class="dashboard" routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page" id="dashboard">&larr; dashboard</button>
+</div>
+
+<div class="container" id="container">
+	<div class="form-container sign-in-container">
+		<form #myForm="ngForm">
+        <div class="formGroup">
+          <h1>Buy Policy</h1>
+          <br><br>
+          <div class="vehicleplate">
+            <label for="vehplate">Enter Your Vehicle's Plate Number</label>
+            <input [(ngModel)]="user1.Vehicle_plate_number" type="platen" placeholder="MH00CU0000" id="platen" name="platen">
+          </div>
+          <div class="vehicleprops">
+            <label for="vehcomp">Enter Your Vehicle's Company</label>
+              <input [(ngModel)]="user1.Vehicle_company" type="comp" placeholder="Honda, BMW" id="comp" name="comp">
+          </div>
+          <div class="vehicleprops">
+            <label for="vehmod">Enter Your Vehicle's Model</label>
+              <input [(ngModel)]="user1.Vehicle_model" type="mod" placeholder="Creta, Fortuner" id="mod" name="mod">
+          </div>
+          <div class="vehicleprops">
+            <label for="vehcol">Enter Your Vehicle's Color</label>
+              <input [(ngModel)]="user1.Vehicle_color" type="col" placeholder="Red, Black" id="col" name="col">
+          </div>
+          <div class="vehicleprops">
+            <label for="vehreg">Enter Your Vehicle's Registration Date</label>
+              <input [(ngModel)]="user1.Vehicle_registration_date" type="reg" placeholder="DD/MM/YYYY" id="reg" name="reg">
+          </div>
+          <div class="vehicleprops">
+            <label for="vehpf">Enter Your Vehicle's Pending Feese</label>
+              <input [(ngModel)]="user1.Vehicle_pending_fines" type="pf" placeholder="Enter NIL if no due" id="pf" name="pf">
+          </div>
+
+
+          <div class="passinp">
+            <label for="custoid">Enter Your ID</label>
+            <input [(ngModel)]="user.Cust_id" type="custid" placeholder="Your Id" id="custid" name="custid">
+          </div>
+          <div class="btngen">
+            <label for="policytype">Please select your Policy Type   </label>
+            <select [(ngModel)]="user.Policy_type" id="type" name="type">
+              <option value="Comprehensive">Comprehensive</option>
+              <option value="Third-Party Liability">Third-Party Liability</option>
+            </select>
+            <br><br>
+          </div>
+          <div class="epContainer">
+            <div class="passinp">
+              <label for="polam">Select Your Policy Amount</label>
+              <select [(ngModel)]="user.Policy_amount" id="amount" name="amount">
+                <option value="4000">₹4,000/month</option>
+                <option value="4000"> ₹5,000/month</option>
+                <option value="5000"> ₹6,000/month</option>
+                <option value="6000"> ₹7,000/month</option>
+                <option value="7000"> ₹8,000/month</option>
+                <option value="8000"> ₹9,000/month</option>
+                <option value="10000"> ₹10,000/month</option>
+                <br><br>
+              </select>
+            </div>
+          </div>
+          <div class="btnnat">
+            <label for="polper">Select your Policy Period    </label>
+            <select [(ngModel)]="user.Policy_valid_date" id="period" name="period">
+              <option value="2024"> 1 Years</option>
+              <option value="2025"> 2 Years</option>
+              <option value="2026"> 3 Years</option>
+              <option value="2027"> 4 Years</option>
+            </select>
+        </div>
+        <div class="btnbtn">
+          <button routerLink="/payment" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="pome()" (click)="randomIntFromInterval(1000, 9999)" (click)="popup = true">Make Payment</button>
+        </div>
+        </div>
+		</form>
+	</div>
+
+
+</div>
+

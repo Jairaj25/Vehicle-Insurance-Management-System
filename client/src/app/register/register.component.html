@@ -1,0 +1,61 @@
+<router-outlet></router-outlet>
+<div class="container" id="container">
+
+	<div class="form-container sign-in-container">
+		<form #myForm="ngForm">
+      <div class="formGroup">
+		    <h1>Register</h1>
+        <input [(ngModel)]="user.Cust_name" type="text" placeholder="Name" id="name" name="name">
+        <div class="epContainer">
+          <div class="emailinp">
+            <input  type="email" placeholder="Email" id="email" >
+          </div>
+          <div class="passinp">
+            <input [(ngModel)]="user.Cust_pass" type="password" placeholder="Password" id="password" name="pass">
+          </div>
+        </div>
+        <div class="btngen">
+          <label for="gender">Please select your Gender   </label>
+          <select [(ngModel)]="user.Cust_gender" id="gender" name="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+          </select>
+        </div>
+        <br>
+        <div class="btnnat">
+          <label for="nationality">Please select your Nationality    </label>
+          <select [(ngModel)]="user.Cust_nationality" id="nationality" name="nation">
+            <option value="Indian">Indian</option>
+            <option value="Pakistani">Pakistani</option>
+            <option value="Sri Lankan">Sri Lankan</option>
+            <option value="Bangladeshi">Bangladeshi</option>
+          </select>
+        </div>
+
+        <input [(ngModel)]="user.Cust_license" type="text" placeholder="License" id="license" name="lic">
+        <br><br>
+        <div class="btnbtn">
+          <button ariaCurrentWhenActive="page" (click)="popup = true" (click)="pome()">Register</button>
+          <p *ngIf="showMyMessage">Content Updated</p>
+
+          <br><br>
+          <p>Already have an account?</p>
+          <button routerLink="/payment" routerLinkActive="active" ariaCurrentWhenActive="page" id="signin">Sign in</button>
+        </div>
+      </div>
+
+		</form>
+	</div>
+
+
+</div>
+
+<div class="overlay" *ngIf="popup">
+	<div class="popup">
+    <h2>Success</h2>
+		<a routerLink="/dashboard" routerLinkActive="active"  class="close" (click)="popup = false">&times;</a>
+		<div class="content">
+      <strong><i>Registered.</i><br>Your ID will be sent to your email</strong>
+		</div>
+	</div>
+</div>

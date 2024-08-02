@@ -1,0 +1,39 @@
+<router-outlet></router-outlet>
+
+<div class="btnlogo">
+  <button class="logout" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" id="logout">Logout</button>
+</div>
+
+<div class="btndb">
+  <button class="dashboard" routerLink="/agentdashboard" routerLinkActive="active" ariaCurrentWhenActive="page" id="dashboard">&larr; dashboard</button>
+</div>
+
+<div class="pols" >
+  <div class="wt">
+        <button class="btndet" ariaCurrentWhenActive="page" (click)="submit()"  (click)="toggleShowTable()">Get Details</button>
+    </div>
+</div>
+
+
+  <div class = "tabledisp">
+     <table *ngIf='showTable' class="tpl" >
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Nationality</th>
+          <th>License</th>
+        </tr>
+
+        <tr *ngFor="let viewcust of viewcust">
+          <td>{{viewcust.cust_name}}</td>
+          <td>{{viewcust.cust_gender}}</td>
+          <td>{{viewcust.cust_nationality}}</td>
+          <td>{{viewcust.cust_license}}</td>
+        </tr>
+      </thead>
+      </table>
+</div>
+
+
+

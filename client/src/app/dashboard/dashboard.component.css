@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+.btnlogo {
+  position: absolute; top: 1.5%; right: 1.5%;
+
+}
+
+
+.viewlabel{
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 27%;
+}
+
+.buylabel{
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 32%;
+  left: 30%;
+}
+
+.claimlabel{
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 15%;
+  left: 41%;
+}
+.vclaimlabel{
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 69%;
+  left: 43%;
+}
+
+.btnview{
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 57%;
+  left: 37%;
+}
+
+.btnbuy{
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 39%;
+  left: 37%;
+}
+
+.btnclaim{
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  left: 39%;
+}
+.btnvclaim{
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 75%;
+  left: 38%;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+
+
+.container {
+  align-items: center;
+  justify-content: center;
+	background-color: #fff;
+  padding: auto;
+	border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+			0 10px 10px rgba(0,0,0,0.22);
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,51 @@
+<router-outlet></router-outlet>
+
+<div class="btnlogo">
+  <button class="logout" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" id="logout">Logout</button>
+</div>
+
+<div class="btndb">
+  <button class="dashboard" routerLink="/agentdashboard" routerLinkActive="active" ariaCurrentWhenActive="page" id="dashboard">&larr; dashboard</button>
+</div>
+
+
+<div>
+  <br><br>
+  <p>Enter your Claims Id</p>
+  <form>
+    <div class="formGroup">
+    <div class="polinp">
+      <input type="text" placeholder="Claim Id" id="claimid" name="claimid" [(ngModel)]="claimid" >
+
+      <br><br>
+    </div>
+    <button ariaCurrentWhenActive="page" (click)="submit()" (click)="toggleShowTable()">Get Details</button>
+    <br><br>
+    </div>
+  </form>
+
+
+</div>
+
+<div class = "tabledisp">
+   <table *ngIf='showTable' class="tpl">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Agent ID</th>
+        <th>Claimed Amount</th>
+        <th>Approved Amount</th>
+        <th>Claims Status</th>
+        <th>Remarks</th>
+      </tr>
+      <tr>
+        <td>{{viewclaim.cust_id}}</td>
+        <td>{{viewclaim.agent_id}}</td>
+        <td>{{viewclaim.claimed_amount}}</td>
+        <td>{{viewclaim.approved_amount}}</td>
+        <td>{{viewclaim.claims_status}}</td>
+        <td>{{viewclaim.remarks}}</td>
+      </tr>
+      </thead>
+      </table>
+</div>

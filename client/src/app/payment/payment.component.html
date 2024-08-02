@@ -1,0 +1,28 @@
+<router-outlet></router-outlet>
+
+<div class="btnlogo">
+  <button class="logout" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" id="logout">Logout</button>
+</div>
+
+<div class="btndb">
+  <button class="dashboard" routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page" id="dashboard">&larr; Dashboard</button>
+</div>
+
+<div class="NYI">
+  <p>NOT YET IMPLEMENTED</p>
+</div>
+
+<div class="btnbtn">
+  <button class="payment" (click)="popup = true" ariaCurrentWhenActive="page" id="dashboard">Pay</button>
+  <p *ngIf="showMyMessage">Content Updated</p>
+</div>
+
+<div class="overlay" *ngIf="popup">
+	<div class="popup">
+    <h2>Success</h2>
+		<a class="close" (click)="popup = false" routerLink="/dashboard" routerLinkActive="active">&times;</a>
+		<div class="content">
+      <strong><i>Content Updated <br> Your Vehicle and Policy Id will be mailed to you</i></strong>
+		</div>
+	</div>
+</div>

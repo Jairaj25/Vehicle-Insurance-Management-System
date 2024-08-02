@@ -1,0 +1,62 @@
+button {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.btnlogo {
+  position: absolute; top: 1.5%; right: 1.5%;
+
+}
+
+.btndb{
+  position: absolute; top: 1.5%; left: 1.5%;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+
+
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 0 25px;
+	height: 100%;
+	text-align: center;
+}
+
+p {
+  display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tabledisp {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+table, th, td {
+  table-layout: auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

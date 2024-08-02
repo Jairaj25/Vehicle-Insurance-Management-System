@@ -1,0 +1,83 @@
+<router-outlet></router-outlet>
+
+<div class="btnlogo">
+  <button class="logout" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" id="logout">Logout</button>
+</div>
+
+<div class="btndb">
+  <button class="dashboard" routerLink="/agentdashboard" routerLinkActive="active" ariaCurrentWhenActive="page" id="dashboard">&larr; dashboard</button>
+</div>
+
+<div class="pols" >
+  <div class="wt">
+    <br><br>
+    <p>Enter Customer's Id</p>
+    <form>
+      <div class="formGroup">
+      <div class="polinp">
+        <input type="text" placeholder="Customer Id" id="custid" name="custid" [(ngModel)]="custid">
+        <input type="text" placeholder="Policy Id" id="policyid" name="policyid" [(ngModel)]="policyid">
+        <input type="text" placeholder="Vehicle Id" id="vehicleid" name="vehicleid" [(ngModel)]="vehicleid">
+
+        <br><br>
+      </div>
+      <button ariaCurrentWhenActive="page" (click)="submit()"  (click)="toggleShowTable()">Get Details</button>
+      <br><br>
+      </div>
+    </form>
+
+
+  </div>
+
+  <div class = "tabledisp">
+     <table *ngIf='showTable' class="tpl" >
+      <thead>
+        <tr>
+          <th colspan="4">Customer</th>
+          <th colspan="4">Policy</th>
+          <th colspan="6">Vehicle</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Nationality</th>
+          <th>License</th>
+
+
+          <th>Type</th>
+          <th>Number </th>
+          <th>Amount </th>
+          <th>Valid Date </th>
+
+          <th>Plate No.</th>
+          <th>Company </th>
+          <th>Model </th>
+          <th>Color </th>
+          <th>Reg. Date </th>
+          <th>Pending fees </th>
+        </tr>
+
+        <tr>
+          <td>{{viewcust.cust_name}}</td>
+          <td>{{viewcust.cust_gender}}</td>
+          <td>{{viewcust.cust_nationality}}</td>
+          <td>{{viewcust.cust_license}}</td>
+
+          <td>{{viewpol.policy_type}}</td>
+          <td>{{viewpol.policy_number}}</td>
+          <td>{{viewpol.policy_amount}}</td>
+          <td>{{viewpol.policy_valid_date}}</td>
+
+          <td>{{viewveh.vehicle_plate_num}}</td>
+          <td>{{viewveh.vehicle_company}}</td>
+          <td>{{viewveh.vehicle_model}}</td>
+          <td>{{viewveh.vehicle_color}}</td>
+          <td>{{viewveh.vehicle_reg_date}}</td>
+          <td>{{viewveh.vehicle_pending_fines}}</td>
+        </tr>
+        </thead>
+        </table>
+  </div>
+
+</div>
+

@@ -1,0 +1,48 @@
+<router-outlet></router-outlet>
+
+<div class="btnlogo">
+  <button class="logout" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" id="logout">Logout</button>
+</div>
+
+<div class="btndb">
+  <button class="dashboard" routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page" id="dashboard">&larr; dashboard</button>
+</div>
+
+
+<div>
+  <br><br>
+  <p>Enter your Policy ID</p>
+  <form>
+    <div class="formGroup">
+    <div class="polinp">
+      <input type="text" placeholder="Policy ID" id="policynum" name="policynum" [(ngModel)]="policynum" >
+
+      <br><br>
+    </div>
+    <button ariaCurrentWhenActive="page" (click)="submit()" (click)="toggleShowTable()">Get Details</button>
+    <br><br>
+    </div>
+  </form>
+
+
+</div>
+
+<div class = "tabledisp">
+   <table *ngIf='showTable' class="tpl">
+
+    <thead>
+      <tr>
+        <th>Policy Type: </th>
+        <th>Policy Number: </th>
+        <th>Policy Amount: </th>
+        <th>Policy Valid Date: </th>
+      </tr>
+      <tr>
+        <td>{{viewpolicy.policy_type}}</td>
+        <td>{{viewpolicy.policy_number}}</td>
+        <td>{{viewpolicy.policy_amount}}</td>
+        <td>{{viewpolicy.policy_valid_date}}</td>
+      </tr>
+      </thead>
+      </table>
+</div>

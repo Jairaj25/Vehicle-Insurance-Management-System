@@ -1,0 +1,57 @@
+<router-outlet></router-outlet>
+
+<div class="btnlogo">
+  <button class="logout" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" id="logout">Logout</button>
+</div>
+
+<div class="btndb">
+  <button class="dashboard" routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page" id="dashboard">&larr; dashboard</button>
+</div>
+
+<div class="container" id="container">
+	<div class="form-container sign-in-container">
+		<form #myForm="ngForm">
+        <div class="formGroup">
+          <h1>Claim</h1>
+          <br><br>
+          <div class="customerid">
+            <label for="cid">Enter Your ID</label>
+            <input [(ngModel)]="user.Cust_id" type="text" placeholder="ID" id="cid" name="cid">
+          </div>
+          <div class="agentid">
+            <label for="aid">Enter Your Agent's ID</label>
+              <input [(ngModel)]="user.Agent_id" type="text" placeholder="ID" id="aid" name="aid">
+          </div>
+          <div class="vehicleid">
+            <label for="vid">Enter Your Vehicle's ID </label>
+              <input [(ngModel)]="user.Vehicle_id" type="text" placeholder="ID" id="vid" name="vid" >
+          </div>
+          <div class="policyid">
+            <label for="pid">Enter Your Policy's ID</label>
+              <input [(ngModel)]="user.Policy_id" type="text" placeholder="ID" id="pid" name="pid">
+          </div>
+          <div class="claimamt">
+            <label for="camt">Enter the amount you want to claim</label>
+              <input [(ngModel)]="user.Claimed_amount" type="text" placeholder="Amount in Rupees" id="camt" name="camt">
+          </div>
+          <div class="btnbtn">
+            <button ariaCurrentWhenActive="page" (click)="popup = true" (click)="pome()">Claim</button>
+            <p *ngIf="showMyMessage">Content Updated</p>
+
+          </div>
+        </div>
+		</form>
+	</div>
+
+
+</div>
+
+<div class="overlay" *ngIf="popup">
+	<div class="popup">
+    <h2>Success</h2>
+		<a routerLink="/dashboard" routerLinkActive="active"  class="close" (click)="popup = false">&times;</a>
+		<div class="content">
+      <strong><i>Claim request sent.</i><br> Your claims id will be sent to your<br> please visit claims page to know about your claim status</strong>
+		</div>
+	</div>
+</div>

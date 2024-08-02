@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  padding-top:58px;
+  }
+
+h1 {
+	font-weight: bold;
+	margin: 0;
+  position: relative;
+  align-items: center;
+}
+
+
+
+button {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+
+
+.passinp{
+    /* margin:0px 0px 0px 10px; */
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.btnlogo {
+  position: absolute; top: 1.5%; right: 1.5%;
+
+}
+
+.btndb{
+  position: absolute; top: 1.5%; left: 1.5%;
+}
+
+.btnbtn{
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+
+
+form {
+	background-color: #FFFFFF;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 25px;
+	height: 130%;
+	text-align: center;
+}
+
+.label[for="vehplate"], label[for="vehcomp"], label[for="vehmod"], label[for="vehcol"], label[for="vehreg"], label[for="vehpf"], label[for="custoid"] {
+  display: inline-block;
+  width: 275px;
+  text-align: left;
+}
+.btngen, .epContainer, .btnnat, .vehicleplate{
+  display: inline-block;
+  width: 275px;
+  text-align: left;
+}
+
+label {
+  display: block;
+
+}
+
+input {
+  display: block;
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+  margin-bottom: 20px;
+}
+.btnnat{
+  margin-bottom: 20px;
+}
+.btnbtn{
+  margin-bottom: 30px;
+}
+
+.container {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow-y: auto;
+	width: 600px;
+
+	min-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+
+	width: 50%;
+
+}
+
+.text-danger {
+    color: red;
+    display: flex;
+    width: 275px;
+    text-align: left;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+visibility: visible;
+  opacity: 1;
+}
+
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+  cursor: pointer;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+
+  .popup{
+    width: 70%;
+  }
+}
+
+
